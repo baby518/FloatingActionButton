@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
+    android:gravity="bottom"
+    android:orientation="horizontal"
+    tools:context="com.example.floatingactionbutton.MainActivity">
+
+    <LinearLayout style="@style/buttonLayout">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/floating_action_button"
+            style="@style/buttonStyle"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_mic"
+            app:backgroundTint="@color/colorFabBackground"
+            app:borderWidth="0dp"
+            app:elevation="6dp"
+            app:fabSize="normal"
+            app:pressedTranslationZ="12dp"
+            app:rippleColor="@color/colorTouchHint" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/buttonLayout">
+
+        <ImageView
+            android:id="@+id/ripple_button"
+            style="@style/buttonStyle"
+            android:background="@drawable/ic_ripple_background"
+            android:elevation="6dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_mic" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/buttonLayout">
+
+        <FrameLayout
+            style="@style/buttonStyle"
+            android:layout_gravity="center"
+            android:background="@drawable/fab_accent"
+            android:elevation="6dp"
+            android:scaleType="centerInside">
+
+            <ImageView
+                android:id="@+id/ripple_button_with_anim"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_gravity="center"
+                android:background="@drawable/fab_mask"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_mic" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout style="@style/buttonLayout">
+
+        <ImageView
+            android:id="@+id/default_button_borderless"
+            style="@style/buttonStyle"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_mic" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/buttonLayout">
+
+        <ImageView
+            android:id="@+id/default_button_border"
+            style="@style/buttonStyle"
+            android:background="?android:attr/selectableItemBackground"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_mic" />
+    </LinearLayout>
+</LinearLayout>
